@@ -1,3 +1,5 @@
+## To do: Improve algorithm
+
 import itertools
 
 rosalind = open("rosalind_sign.txt", "r")
