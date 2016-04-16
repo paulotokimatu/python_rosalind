@@ -1,21 +1,10 @@
-file = open("rosalind_revc(1).txt", "r")
-x = file.read()
+rosalind = open("rosalind_revc.txt", "r")
+x = rosalind.read().strip()
 
-x = x[::-1]
-list_nuc = list(x)
+result = []
+complement = {"A": "T", "T": "A", "C": "G", "G": "C"}
 
-def complement(original):
-    if (original == "A"):
-        return "T"
-    elif (original == "C"):
-        return "G"
-    elif (original == "G"):
-        return "C"
-    elif (original == "T"):
-        return "A"
+for i in list(x[::-1]):
+    result.append(complement[i])
 
-for i in range(0,len(x)):
-    list_nuc[i] = complement(list_nuc[i])
-
-print list_nuc
-print "".join(list_nuc)
+print "".join(result)
